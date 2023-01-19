@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-life-cycle';
+  inputText:string = '';
+  destroy:boolean = true;
+  OnSubmit(inputEle:HTMLInputElement)
+  {
+    this.inputText = inputEle.value;
+  }
+  destroyComponent(){
+    this.destroy = false;
+  }
 }
